@@ -12,14 +12,15 @@ main {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left; /* Align text to the left */
 }
 
 h1, h2 {
     color: #e44d26;
     cursor: pointer;
     user-select: none;
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
 
 h2 {
     cursor: pointer;
@@ -37,22 +38,28 @@ input {
 
 div.data {
     margin-top: 20px;
-            padding: 20px;
-            background-color: #f2f2f2;
-            border-radius: 8px;
-            text-align: left;
-        }
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    text-align: left;
+}
 
 .folded-section {
     display: none;
 }
 
-.folded-section.visible{
+.folded-section.visible {
     display: block;
 }
 
 @media (max-width: 600px) {
     main {
         padding: 10px;
+    }
+    
+    /* Additional styles for smaller screens */
+    h1, h2, label, p {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 }
