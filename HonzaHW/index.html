@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCook</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-right: 5px;
+        }
+
+        div.data {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 4px;
+        }
+        .folded-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>SmartCook</h1>
+        
+        <h2 onclick="toggleSection('difficulty')">Difficulty</h2>
+        <div id="difficulty" class="folded-section">
+        <label><input type="radio" name="difficulty" value="1" />Simple</label>
+        <label><input type="radio" name="difficulty" value="2" />Medium</label>
+        <label><input type="radio" name="difficulty" value="3" />Difficult</label>
+        </div>
+
+        <h2 onclick="toggleSection('dishCategory')">Dish category</h2>
+        <div id="dishCategory" class="folded-section">
+        <label><input type="radio" name="dishCategory" value="1" />Breakfast</label>
+        <label><input type="radio" name="dishCategory" value="2" />Soup</label>
+        <label><input type="radio" name="dishCategory" value="3" />Main Course</label>
+        <label><input type="radio" name="dishCategory" value="4" />Dessert</label>
+        <label><input type="radio" name="dishCategory" value="5" />Dinner</label>
+        </div>
+        
+        <h2 onclick="toggleSection('price')">Price</h2>
+        <div id="price" class="folded-section">
+        <label><input type="radio" name="price" value="1" />Cheap</label>
+        <label><input type="radio" name="price" value="2" />Medium</label>
+        <label><input type="radio" name="price" value="3" />Expensive</label>
+        </div>
+
+        <h2 onclick="toggleSection('recipeCategory')">Recipe category</h2>
+        <div id="recipeCategory" class="folded-section">
+        <label><input type="radio" name="recipeCategory" value="1" />Soup</label>
+        <label><input type="radio" name="recipeCategory" value="2" />Meat</label>
+        <label><input type="radio" name="recipeCategory" value="3" />Meat Free</label>
+        <label><input type="radio" name="recipeCategory" value="4" />Dessert</label>
+        <label><input type="radio" name="recipeCategory" value="5" />Sauce</label>
+        <label><input type="radio" name="recipeCategory" value="6" />Pasta</label>
+        <label><input type="radio" name="recipeCategory" value="7" />Salad</label>
+        <label><input type="radio" name="recipeCategory" value="8" />Sweet Food</label>
+        <label><input type="radio" name="recipeCategory" value="9" />Drink</label>
+        </div>
+
+        <h2 onclick="toggleSection('tolerance')">Tolerance</h2>
+        <div id="tolerance" class="folded-section">
+        <label><input type="checkbox" name="tolerance" value="1" />Vegetarian</label>
+        <label><input type="checkbox" name="tolerance" value="2" />Vegan</label>
+        <label><input type="checkbox" name="tolerance" value="3" />Nuts</label>
+        <label><input type="checkbox" name="tolerance" value="4" />Gluten</label>
+        <label><input type="checkbox" name="tolerance" value="5" />Lactose</label>
+        <label><input type="checkbox" name="tolerance" value="6" />Spicy</label>
+        <label><input type="checkbox" name="tolerance" value="7" />Alcohol</label>
+        <label><input type="checkbox" name="tolerance" value="8" />Seafood</label>
+        <label><input type="checkbox" name="tolerance" value="9" />Mushrooms</label>
+        </div>
+
+        <h2 onclick="toggleSection('unit')">Unit</h2>
+        <div id="unit" class="folded-section">
+        <label><input type="radio" name="unit" value="l" />Liter</label>
+        <label><input type="radio" name="unit" value="g" />Gram</label>
+        <label><input type="radio" name="unit" value="pc" />Piece</label>
+        </div>
+
+        <h1>DATA</h1>
+        <div class="data">
+            <!-- Placeholder content, replace with actual data -->
+            <p>Data will appear here.</p>
+        </div>
+        <script>
+            function toggleSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+            }
+        </script>
+    </main>
+</body>
+</html>
