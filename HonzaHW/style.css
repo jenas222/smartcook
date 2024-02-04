@@ -15,7 +15,7 @@ main {
     text-align: left; /* Align text to the left */
 }
 
-h1, h2 {
+h2 {
     color: #e44d26;
     cursor: pointer;
     user-select: none;
