@@ -12,69 +12,88 @@
 <body>
     <main>
         <h1>SmartCook</h1>
-        <h2 onclick="toggleSection('difficulty')">Difficulty</h2>
-        <div id="difficulty" class="folded-section">
-            <label><input type="radio" name="difficulty" value="1" />Simple</label>
-            <label><input type="radio" name="difficulty" value="2" />Medium</label>
-            <label><input type="radio" name="difficulty" value="3" />Difficult</label>
-        </div>
-
-        <h2 onclick="toggleSection('dishCategory')">Dish category</h2>
-        <div id="dishCategory" class="folded-section">
-            <label><input type="radio" name="dishCategory" value="1" />Breakfast</label>
-            <label><input type="radio" name="dishCategory" value="2" />Soup</label>
-            <label><input type="radio" name="dishCategory" value="3" />Main Course</label>
-            <label><input type="radio" name="dishCategory" value="4" />Dessert</label>
-            <label><input type="radio" name="dishCategory" value="5" />Dinner</label>
-        </div>
-
-        <h2 onclick="toggleSection('price')">Price</h2>
-        <div id="price" class="folded-section">
-            <label><input type="radio" name="price" value="1" />Cheap</label>
-            <label><input type="radio" name="price" value="2" />Medium</label>
-            <label><input type="radio" name="price" value="3" />Expensive</label>
-        </div>
-
-        <h2 onclick="toggleSection('recipeCategory')">Recipe category</h2>
-        <div id="recipeCategory" class="folded-section">
-            <label><input type="radio" name="recipeCategory" value="1" />Soup</label>
-            <label><input type="radio" name="recipeCategory" value="2" />Meat</label>
-            <label><input type="radio" name="recipeCategory" value="3" />Meat Free</label>
-            <label><input type="radio" name="recipeCategory" value="4" />Dessert</label>
-            <label><input type="radio" name="recipeCategory" value="5" />Sauce</label>
-            <label><input type="radio" name="recipeCategory" value="6" />Pasta</label>
-            <label><input type="radio" name="recipeCategory" value="7" />Salad</label>
-            <label><input type="radio" name="recipeCategory" value="8" />Sweet Food</label>
-            <label><input type="radio" name="recipeCategory" value="9" />Drink</label>
-        </div>
-
-        <h2 onclick="toggleSection('tolerance')">Tolerance</h2>
-        <div id="tolerance" class="folded-section">
-            <label><input type="checkbox" name="tolerance" value="1" />Vegetarian</label>
-            <label><input type="checkbox" name="tolerance" value="2" />Vegan</label>
-            <label><input type="checkbox" name="tolerance" value="3" />Nuts</label>
-            <label><input type="checkbox" name="tolerance" value="4" />Gluten</label>
-            <label><input type="checkbox" name="tolerance" value="5" />Lactose</label>
-            <label><input type="checkbox" name="tolerance" value="6" />Spicy</label>
-            <label><input type="checkbox" name="tolerance" value="7" />Alcohol</label>
-            <label><input type="checkbox" name="tolerance" value="8" />Seafood</label>
-            <label><input type="checkbox" name="tolerance" value="9" />Mushrooms</label>
-        </div>
-        <h2 onclick="toggleSection('unit')">Unit</h2>
-        <div id="unit" class="folded-section">
-            <label><input type="radio" name="unit" value="l" />Liter</label>
-            <label><input type="radio" name="unit" value="g" />Gram</label>
-            <label><input type="radio" name="unit" value="pc" />Piece</label>
+        <div class="options">
+            <div class="options__wrap">
+                <div class="options__item">
+                    <p class="options__item__text" onclick="toggleSection('difficulty')">Difficulty</p>
+                    <div id="difficulty" class="folded-section">
+                        <label><input type="radio" name="difficulty" value="1" />Simple</label>
+                        <label><input type="radio" name="difficulty" value="2" />Medium</label>
+                        <label><input type="radio" name="difficulty" value="3" />Difficult</label>
+                    </div>
+                </div>
+                <div class="options__item">
+                    <p class="options__item__text" onclick="toggleSection('dishCategory')">Dish category</p>
+                    <div id="dishCategory" class="folded-section">
+                        <label><input type="radio" name="dishCategory" value="1" />Breakfast</label>
+                        <label><input type="radio" name="dishCategory" value="2" />Soup</label>
+                        <label><input type="radio" name="dishCategory" value="3" />Main Course</label>
+                        <label><input type="radio" name="dishCategory" value="4" />Dessert</label>
+                        <label><input type="radio" name="dishCategory" value="5" />Dinner</label>
+                    </div>
+                </div>
+                <div class="options__item">
+                    <p class="options__item__text" onclick="toggleSection('price')">Price</p>
+                    <div id="price" class="folded-section">
+                        <label><input type="radio" name="price" value="1" />Cheap</label>
+                        <label><input type="radio" name="price" value="2" />Medium</label>
+                        <label><input type="radio" name="price" value="3" />Expensive</label>
+                    </div>
+                </div>
+                <div class="options__item">
+                    <p class="options__item__text" onclick="toggleSection('recipeCategory')">Recipe category</p>
+                    <div id="recipeCategory" class="folded-section">
+                        <label><input type="radio" name="recipeCategory" value="1" />Soup</label>
+                        <label><input type="radio" name="recipeCategory" value="2" />Meat</label>
+                        <label><input type="radio" name="recipeCategory" value="3" />Meat Free</label>
+                        <label><input type="radio" name="recipeCategory" value="4" />Dessert</label>
+                        <label><input type="radio" name="recipeCategory" value="5" />Sauce</label>
+                        <label><input type="radio" name="recipeCategory" value="6" />Pasta</label>
+                        <label><input type="radio" name="recipeCategory" value="7" />Salad</label>
+                        <label><input type="radio" name="recipeCategory" value="8" />Sweet Food</label>
+                        <label><input type="radio" name="recipeCategory" value="9" />Drink</label>
+                    </div>
+                </div>
+                <div class="options__item">
+                    <p class="options__item__text" onclick="toggleSection('tolerance')">Tolerance</p>
+                    <div id="tolerance" class="folded-section">
+                        <label><input type="checkbox" name="tolerance" value="1" />Vegetarian</label>
+                        <label><input type="checkbox" name="tolerance" value="2" />Vegan</label>
+                        <label><input type="checkbox" name="tolerance" value="3" />Nuts</label>
+                        <label><input type="checkbox" name="tolerance" value="4" />Gluten</label>
+                        <label><input type="checkbox" name="tolerance" value="5" />Lactose</label>
+                        <label><input type="checkbox" name="tolerance" value="6" />Spicy</label>
+                        <label><input type="checkbox" name="tolerance" value="7" />Alcohol</label>
+                        <label><input type="checkbox" name="tolerance" value="8" />Seafood</label>
+                        <label><input type="checkbox" name="tolerance" value="9" />Mushrooms</label>
+                    </div>
+                </div>
+                <div class="options__item">
+                    <p class="options__item__text" onclick="toggleSection('unit')">Unit</p>
+                    <div id="unit" class="folded-section">
+                        <label><input type="radio" name="unit" value="l" />Liter</label>
+                        <label><input type="radio" name="unit" value="g" />Gram</label>
+                        <label><input type="radio" name="unit" value="pc" />Piece</label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="data">
-            <h3>Spaghetti Bolognese</h3>
-            <p>A classic Italian dish with a rich and flavorful meat sauce served over cooked spaghetti.</p>
-
-            <h3>Chicken Alfredo Pasta</h3>
-            <p>Creamy Alfredo sauce paired with grilled chicken and fettuccine pasta, a comforting and indulgent meal.</p>
-
-            <h3>Vegetarian Stir-Fry</h3>
-            <p>Colorful vegetables stir-fried to perfection with tofu or your favorite meat substitute, seasoned with soy sauce and ginger.</p>
+            <div class="reciepe">
+                <h2>Spaghetti Bolognese</h2>
+                <p>A classic Italian dish with a rich and flavorful meat sauce served over cooked spaghetti.</p>
+            </div>
+            <div class="reciepe">
+                <h2>Chicken Alfredo Pasta</h2>
+                <p>Creamy Alfredo sauce paired with grilled chicken and fettuccine pasta, a comforting and indulgent
+                    meal.</p>
+            </div>
+            <div class="reciepe">
+                <h2>Vegetarian Stir-Fry</h2>
+                <p>Colorful vegetables stir-fried to perfection with tofu or your favorite meat substitute, seasoned
+                    with
+                    soy sauce and ginger.</p>
+            </div>
         </div>
     </main>
 </body>
