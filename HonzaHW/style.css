@@ -6,18 +6,32 @@ body {
 }
 
 main {
-    max-width: 952px;
+    max-width: 948px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
+    /* Align text to the left */
+}
+
+.button {
+    background-color: #313533;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .options {
     position: relative;
     height: 38px;
+    pointer-events: none;
 }
 
 .options__wrap {
@@ -33,7 +47,7 @@ main {
 .options__item {
     display: flex;
     flex-direction: column;
-    min-width: 150px;
+    min-width: 158px;
     position: relative;
     border-right: 0px;
 }
@@ -46,6 +60,7 @@ main {
     padding: 8px 0;
     border: 1px solid black;
     border-right: 0;
+    pointer-events: all;
 }
 
 .options__item:last-child .options__item__text {
@@ -75,6 +90,7 @@ input {
     border: 1px solid black;
     border-top: 0px;
     padding-top: 8px;
+    pointer-events: all;
 }
 
 .folded-section.visible {
@@ -92,7 +108,7 @@ div.data {
     gap: 24px
 }
 
-.reciepe {
+.recipe {
     width: 250px;
     flex-grow: 1;
 }
@@ -101,4 +117,4 @@ div.data {
     main {
         margin-top: 0;
     }
-} 
+}
