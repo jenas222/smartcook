@@ -30,9 +30,9 @@ class SmartCookClient
      * The user who sends requests to the API
      */
     private const SENDER = [
-        "id" => 17,
-        "name" => "Peterka Jan",
-        "secret" => "89y653"
+        "id" => 0,
+        "name" => "Test User",
+        "secret" => "*****"
     ];
 
     /**
