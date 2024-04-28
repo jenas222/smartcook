@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartCook</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+<script src="app.js" defer></script>
 </head>
+<?php
 
+?>
 <body>
     <main>
         <h1>SmartCook</h1>
@@ -82,7 +84,53 @@
             <input class="button" type="submit" value="Filter"></input>
         </form>
         <div id="data" class="data">
+        <?php
+        require_once("SmartCookClient.php");
 
+        $request_data = [
+            "attributes" => ["id", "name"],
+        ];
+
+        try {
+        $SCC = (new SmartCookClient)
+                ->setRequestData($request_data)
+                ->sendRequest("recipes")
+                ->getResponseData();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        foreach ($SCC["data"] as $index => $val)
+        {
+            echo "<div class='recipe' id='id-".$val["id"]."'><a href = 'stranka.php?recipe=".$val["id"]."'><h2>".$val["name"]."</h2></a></div>";
+        }
+        
+        if(isset($_GET["recipe"])){
+            try {
+                $SCS = (new SmartCookClient)
+                    ->setRequestData(["recipe_id" => $_GET["recipe"]])
+                    ->sendRequest("recipe")
+                    ->getResponseData();
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
+        echo "<div id='description' class='id-".$_GET["recipe"]."'><ul>";
+       
+        echo "<li>Name: ".$SCS["data"]["name"]."</li>";
+        echo "<li>Tolerance: ".implode(", ",$SCS["data"]["tolerance"])."</li>";
+        echo "<li>Recipe category: ".implode(", ",$SCS["data"]["recipe_category"])."</li>";
+        echo "<li>Dish category: ".implode(", ",$SCS["data"]["dish_category"])."</li>";
+        echo "<li>Duration: ".$SCS["data"]["duration"]."</li>";
+        echo "<li>Ingredients:</li><ul>";
+        foreach ($SCS["data"]["ingredient"] as $val){
+            echo "<li>".$val["name"]." ".$val["quantity"].$val["unit"]."</li>";
+        }
+        echo "</ul>";
+        echo "<li> Desc: ".$SCS["data"]["description"]."</li>";
+        echo "</ul></div>";
+        }
+        
+        ?>
         </div>
     </main>
 </body>
